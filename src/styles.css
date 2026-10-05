@@ -1,0 +1,328 @@
+@import "tailwindcss";
+@import "@fontsource-variable/source-sans-3/wght.css";
+@import "@fontsource-variable/source-sans-3/wght-italic.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+
+@theme inline {
+  --font-sans: "Source Sans 3 Variable", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-bg: var(--ng-bg);
+  --color-side: var(--ng-side);
+  --color-deep: var(--ng-deep);
+  --color-raised: var(--ng-raised);
+  --color-fg: var(--ng-fg);
+  --color-muted: var(--ng-muted);
+  --color-faint: var(--ng-faint);
+  --color-accent: var(--ng-accent);
+  --color-accent-fg: var(--ng-accent-fg);
+  --color-border: var(--ng-border);
+  --color-danger: var(--ng-danger);
+}
+
+:root,
+[data-theme="obsidian"] {
+  color-scheme: dark;
+  --ng-bg: #202020;
+  --ng-side: #1a1a1a;
+  --ng-deep: #141414;
+  --ng-raised: #2a2a2a;
+  --ng-fg: #e3e3e3;
+  --ng-muted: #a3a3a3;
+  --ng-faint: #6e6e6e;
+  --ng-accent: #7c6cf2;
+  --ng-accent-fg: #f7f5ff;
+  --ng-border: #333333;
+  --ng-danger: #e06c75;
+}
+
+[data-theme="nord"] {
+  color-scheme: dark;
+  --ng-bg: #2e3440;
+  --ng-side: #272c36;
+  --ng-deep: #21262f;
+  --ng-raised: #3b4252;
+  --ng-fg: #eceff4;
+  --ng-muted: #c5ced9;
+  --ng-faint: #7b88a1;
+  --ng-accent: #88c0d0;
+  --ng-accent-fg: #1c2430;
+  --ng-border: #434c5e;
+  --ng-danger: #bf616a;
+}
+
+[data-theme="mocha"] {
+  color-scheme: dark;
+  --ng-bg: #1e1e2e;
+  --ng-side: #181825;
+  --ng-deep: #11111b;
+  --ng-raised: #313244;
+  --ng-fg: #cdd6f4;
+  --ng-muted: #a6adc8;
+  --ng-faint: #6c7086;
+  --ng-accent: #cba6f7;
+  --ng-accent-fg: #11111b;
+  --ng-border: #45475a;
+  --ng-danger: #f38ba8;
+}
+
+[data-theme="ember"] {
+  color-scheme: dark;
+  --ng-bg: #161311;
+  --ng-side: #110f0d;
+  --ng-deep: #0c0a09;
+  --ng-raised: #261f1b;
+  --ng-fg: #f4ece4;
+  --ng-muted: #b7a89a;
+  --ng-faint: #7d6e62;
+  --ng-accent: #e08a4f;
+  --ng-accent-fg: #1a120c;
+  --ng-border: #3a312b;
+  --ng-danger: #e36b5c;
+}
+
+[data-theme="minimal"] {
+  color-scheme: light;
+  --ng-bg: #ffffff;
+  --ng-side: #f4f4f4;
+  --ng-deep: #ebebeb;
+  --ng-raised: #f7f7f7;
+  --ng-fg: #1f1f1f;
+  --ng-muted: #5e5e5e;
+  --ng-faint: #8d8d8d;
+  --ng-accent: #6b59d6;
+  --ng-accent-fg: #ffffff;
+  --ng-border: #e2e2e2;
+  --ng-danger: #c24040;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--ng-bg);
+    color: var(--ng-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--ng-bg);
+    color: var(--ng-fg);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--ng-accent) 35%, transparent);
+    color: var(--ng-fg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-root,
+  .theme-root * {
+    transition:
+      background-color 160ms ease,
+      color 160ms ease,
+      border-color 160ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-root,
+  .theme-root * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.vault-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ng-border) transparent;
+}
+
+.bg-accent-soft {
+  background-color: color-mix(in srgb, var(--ng-accent) 16%, transparent);
+}
+
+.shadow-pop {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--ng-fg) 10%, transparent),
+    0 16px 40px rgb(0 0 0 / 0.32);
+}
+
+[data-theme="minimal"] .shadow-pop {
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 0.06),
+    0 12px 32px rgb(0 0 0 / 0.12);
+}
+
+.swatch {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ng-fg) 16%, transparent);
+}
+
+.swatch-obsidian {
+  background: linear-gradient(135deg, #1a1a1a 52%, #7c6cf2 52%);
+}
+.swatch-nord {
+  background: linear-gradient(135deg, #2e3440 52%, #88c0d0 52%);
+}
+.swatch-mocha {
+  background: linear-gradient(135deg, #1e1e2e 52%, #cba6f7 52%);
+}
+.swatch-ember {
+  background: linear-gradient(135deg, #161311 52%, #e08a4f 52%);
+}
+.swatch-minimal {
+  background: linear-gradient(135deg, #ffffff 52%, #6b59d6 52%);
+}
+
+.graph-field {
+  background-color: var(--ng-bg);
+  background-image: radial-gradient(var(--ng-border) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.vault-md {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+  color: var(--ng-fg);
+}
+
+.vault-md > :first-child {
+  margin-top: 0;
+}
+
+.vault-md p,
+.vault-md ul,
+.vault-md ol,
+.vault-md pre,
+.vault-md table {
+  margin: 0.85rem 0;
+}
+
+.vault-md h2,
+.vault-md h3,
+.vault-md h4 {
+  text-wrap: balance;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--ng-fg);
+}
+
+.vault-md h2 {
+  margin: 1.5rem 0 0.45rem;
+  font-size: 1.35rem;
+}
+
+.vault-md h3 {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.vault-md h4 {
+  margin: 1rem 0 0.35rem;
+  font-size: 1.02rem;
+}
+
+.vault-md a {
+  color: var(--ng-accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ng-accent) 45%, transparent);
+  text-underline-offset: 3px;
+}
+
+.vault-md a.unresolved {
+  text-decoration-style: dashed;
+}
+
+.vault-md strong {
+  font-weight: 650;
+}
+
+.vault-md em {
+  font-style: italic;
+}
+
+.vault-md code {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  background: var(--ng-raised);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
+}
+
+.vault-md pre {
+  background: var(--ng-raised);
+  border: 1px solid var(--ng-border);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+}
+
+.vault-md pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.vault-md ul,
+.vault-md ol {
+  padding-left: 0.15rem;
+}
+
+.vault-md li {
+  margin: 0.2rem 0;
+}
+
+.vault-md hr {
+  border: 0;
+  border-top: 1px solid var(--ng-border);
+  margin: 1.25rem 0;
+}
+
+.vault-md table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.vault-md th,
+.vault-md td {
+  border-bottom: 1px solid var(--ng-border);
+  text-align: left;
+  padding: 0.4rem 0.55rem;
+}
+
+.vault-md th {
+  color: var(--ng-muted);
+  font-weight: 600;
+}
+
+.note-title {
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.btn-danger {
+  background: var(--ng-danger);
+  color: #fff;
+}
+
+.tag-chip {
+  color: var(--ng-accent);
+  background: color-mix(in srgb, var(--ng-accent) 12%, transparent);
+}
