@@ -369,7 +369,7 @@ function RailButton({
       onClick={onClick}
       className={cn(
         "grid size-9 place-items-center rounded-md text-muted hover:bg-raised hover:text-fg",
-        active && "bg-accent-soft text-accent",
+        active && "bg-gold-soft text-gold",
       )}
     >
       {children}
@@ -421,7 +421,7 @@ function ThemeMenu({
           onClick={() => onPick(item.id)}
           className={cn(
             "flex w-full items-center gap-3 rounded-md px-2 py-2 text-left hover:bg-raised",
-            item.id === theme && "bg-accent-soft",
+            item.id === theme && "bg-gold-soft",
           )}
         >
           <span className={cn("swatch", `swatch-${item.id}`)} />

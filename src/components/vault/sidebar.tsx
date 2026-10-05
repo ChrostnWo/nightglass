@@ -63,7 +63,7 @@ export function Sidebar({ onOpened, onDeleteNote, onDeleteFolder }: Props) {
         <Shard />
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">Nightglass</p>
-          <p className="truncate text-xs text-faint">Obsidian theme</p>
+          <p className="truncate text-xs text-faint">Charcoal & crimson</p>
         </div>
       </div>
       <div className="px-2 pt-2">
@@ -75,7 +75,7 @@ export function Sidebar({ onOpened, onDeleteNote, onDeleteFolder }: Props) {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search notes"
             aria-label="Search notes"
-            className="h-11 w-full rounded-md border border-border bg-deep pr-8 pl-8 text-base text-fg outline-none placeholder:text-faint focus-visible:border-accent md:h-8 md:text-sm"
+            className="h-11 w-full rounded-md border border-border bg-deep pr-8 pl-8 text-base text-fg outline-none placeholder:text-faint focus-visible:border-gold md:h-8 md:text-sm"
           />
           {query ? (
             <button
@@ -129,7 +129,7 @@ export function Sidebar({ onOpened, onDeleteNote, onDeleteFolder }: Props) {
                 onClick={() => open(note.id)}
                 className={cn(
                   "block w-full px-3 py-2 text-left hover:bg-raised",
-                  note.id === activeId && "bg-accent-soft",
+                  note.id === activeId && "bg-gold-soft",
                 )}
               >
                 <span className="block truncate text-sm">{note.title}</span>
@@ -207,14 +207,14 @@ function Tree({
   return (
     <>
       {sortedNotes(notes, parentId).map((note) => (
-        <div key={note.id} className={cn("group flex items-center pr-1", note.id === activeId && "bg-accent-soft")}>
+        <div key={note.id} className={cn("group flex items-center pr-1", note.id === activeId && "bg-gold-soft")}>
           <button
             type="button"
             onClick={() => onOpen(note.id)}
             className={cn("flex h-10 min-w-0 flex-1 items-center gap-1.5 text-left text-sm md:h-7", pad)}
             aria-current={note.id === activeId ? "page" : undefined}
           >
-            <FileText className={cn("size-3.5 shrink-0", note.id === activeId ? "text-accent" : "text-faint")} />
+            <FileText className={cn("size-3.5 shrink-0", note.id === activeId ? "text-gold" : "text-faint")} />
             <span className="truncate">{note.title}</span>
           </button>
           <button
@@ -376,8 +376,8 @@ export function Shard({ className = "size-7" }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
       <rect width="32" height="32" rx="8" fill="var(--ng-deep)" />
-      <path d="M16 5.5 25.2 13.2 20.4 26.2 10.2 23.6 7 13.8Z" fill="var(--ng-accent)" />
-      <path d="M16 5.5 20.6 16.4 10.2 23.6 7 13.8Z" fill="color-mix(in srgb, var(--ng-accent-fg) 70%, var(--ng-accent))" opacity="0.55" />
+      <path d="M16 5.5 25.2 13.2 20.4 26.2 10.2 23.6 7 13.8Z" fill="var(--ng-crimson)" />
+      <path d="M16 5.5 20.6 16.4 10.2 23.6 7 13.8Z" fill="var(--ng-dandelion)" />
     </svg>
   );
 }

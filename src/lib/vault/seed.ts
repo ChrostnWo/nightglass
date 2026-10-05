@@ -30,7 +30,7 @@ export const SEED_NOTES: Note[] = [
     "Welcome",
     null,
     `
-Nightglass is a private vault dressed in the Obsidian theme: charcoal panes, one violet accent, and notes that point at each other.
+Nightglass is a private vault: charcoal panes, black rails, white type, crimson for the action, and dandelion for the mark.
 
 Nothing here leaves this browser. Follow a link, change the glass, or write over this page.
 
@@ -41,8 +41,8 @@ Nothing here leaves this browser. Follow a link, change the glass, or write over
 - [[Themes]] keeps the words and changes the glass.
 - [[Callouts]] hold the aside you do not want to lose.
 
-> [!note] Obsidian
-> The default theme takes its name from the stone, and from the quiet writing app it borrows. Dark panes, soft text, violet only where the eye should land.
+> [!note] Palette
+> Charcoal, crimson, white, black, and dandelion. The words stay light. Color only marks where to look.
 
 ## Try this
 
@@ -120,11 +120,11 @@ The words stay. The glass changes. Open the palette icon on the left rail, or pr
 
 ## Five glasses
 
-- **Obsidian** is the default. Near-black panes, a single violet accent.
-- **Nord** is arctic gray with a frost accent.
-- **Mocha** is a warmer night, lilac on indigo.
-- **Ember** is the stone itself: black, with a copper fracture.
-- **Minimal** is paper, for a bright room.
+- **Obsidian** is the default. Charcoal panes, white type, crimson controls, dandelion marks.
+- **Nord** is black, with dandelion on the buttons.
+- **Mocha** is the same night, pressed darker, crimson at the edge.
+- **Ember** is charcoal with a dandelion flame.
+- **Minimal** is white paper and black type, still crimson and dandelion.
 
 The choice is remembered with the vault. [[Obsidian glass]] is the note about the rock. This one is only about color.
 
@@ -142,7 +142,7 @@ Obsidian is lava that cooled before it could crystallize. What you get is glass:
 
 Most of the stone looks black because the glass swallows light. A thin flake can go smoky brown. The shine is the surface, not a dye. Break it and the break is a [[Conchoidal fracture]], the same curve thick bottle glass makes.
 
-It only comes from [[Volcanic glass]]. People have knapped it into blades and mirrors for a very long time. This vault borrows the name. The default [[Themes|theme]] borrows the color: dark, quiet, one bright edge.
+It only comes from [[Volcanic glass]]. People have knapped it into blades and mirrors for a very long time. This vault borrows the name. The default [[Themes|theme]] borrows the night: charcoal, black, and two bright edges.
 
 #field
 `,

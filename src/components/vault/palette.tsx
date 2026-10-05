@@ -172,7 +172,7 @@ export function Palette({ mode, onClose, onGraph, onEditor, onRestore }: Props) 
                   onClick={() => item.run()}
                   className={cn(
                     "flex h-11 w-full items-center gap-3 px-4 text-left text-sm",
-                    itemIndex === index ? "bg-accent-soft text-fg" : "text-muted",
+                    itemIndex === index ? "bg-gold-soft text-fg" : "text-muted",
                   )}
                 >
                   <span className="min-w-0 flex-1 truncate text-fg">{item.label}</span>

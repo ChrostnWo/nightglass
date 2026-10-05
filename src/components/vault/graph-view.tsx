@@ -249,7 +249,7 @@ export function GraphView({ notes, activeId, onOpen }: Props) {
                 y1={a.y}
                 x2={b.x}
                 y2={b.y}
-                stroke={hot ? "var(--ng-accent)" : "var(--ng-border)"}
+                stroke={hot ? "var(--ng-dandelion)" : "var(--ng-border)"}
                 strokeWidth={hot ? 1.6 : 1}
               />
             );
@@ -265,8 +265,8 @@ export function GraphView({ notes, activeId, onOpen }: Props) {
                   cx={node.x}
                   cy={node.y}
                   r={active ? 8 : 6}
-                  fill={active ? "var(--ng-accent)" : "var(--ng-raised)"}
-                  stroke={active || linked ? "var(--ng-accent)" : "var(--ng-faint)"}
+                  fill={active ? "var(--ng-crimson)" : "var(--ng-raised)"}
+                  stroke={active || linked ? "var(--ng-dandelion)" : "var(--ng-faint)"}
                   strokeWidth={active ? 2.5 : 1.25}
                 />
                 <text

@@ -77,7 +77,7 @@ export function SidePane({ onOpenTitle, onTag }: Props) {
                   <button
                     type="button"
                     onClick={() => onOpenTitle(title)}
-                    className={exists ? "block w-full truncate rounded px-1 py-1 text-left text-sm hover:bg-raised" : "block w-full truncate rounded px-1 py-1 text-left text-sm text-accent hover:bg-raised"}
+                    className={exists ? "block w-full truncate rounded px-1 py-1 text-left text-sm hover:bg-raised" : "block w-full truncate rounded px-1 py-1 text-left text-sm text-gold hover:bg-raised"}
                   >
                     {exists ? title : `${title} · new`}
                   </button>

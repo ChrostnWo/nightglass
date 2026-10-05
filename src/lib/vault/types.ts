@@ -24,9 +24,9 @@ export type ThemeMeta = {
 };
 
 export const THEMES: ThemeMeta[] = [
-  { id: "obsidian", name: "Obsidian", blurb: "Charcoal and violet" },
-  { id: "nord", name: "Nord", blurb: "Arctic blue-gray" },
-  { id: "mocha", name: "Mocha", blurb: "Lilac on indigo" },
-  { id: "ember", name: "Ember", blurb: "Glass with a copper edge" },
-  { id: "minimal", name: "Minimal", blurb: "Quiet paper" },
+  { id: "obsidian", name: "Obsidian", blurb: "Charcoal, crimson, dandelion" },
+  { id: "nord", name: "Nord", blurb: "Black field, dandelion controls" },
+  { id: "mocha", name: "Mocha", blurb: "Black with a crimson edge" },
+  { id: "ember", name: "Ember", blurb: "Charcoal and a dandelion flame" },
+  { id: "minimal", name: "Minimal", blurb: "White paper, crimson mark" },
 ];

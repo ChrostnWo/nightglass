@@ -204,9 +204,9 @@ function BlockView({
   if (block.type === "quote") {
     const kind = block.kind ?? "note";
     return (
-      <aside className="my-4 rounded-md border border-border border-l-2 border-l-accent bg-raised px-4 py-3">
+      <aside className="my-4 rounded-md border border-border border-l-2 border-l-gold bg-raised px-4 py-3">
         {block.kind ? (
-          <p className="mb-1 flex items-center gap-2 text-xs font-semibold tracking-wide text-accent uppercase">
+          <p className="mb-1 flex items-center gap-2 text-xs font-semibold tracking-wide text-gold uppercase">
             <CalloutIcon kind={kind} />
             {kind}
           </p>
